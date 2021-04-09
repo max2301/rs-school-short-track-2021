@@ -15,10 +15,10 @@
 function isMAC48Address(n) {
   const arr = n.split('-');
   for (let i = 0; i < arr.length; i++) {
-    if ((arr[i][0] <= 0 && arr[i][0] >= 9) || arr[i][0] > 'F') {
+    if ((arr[i][0] < 0 && arr[i][0] > 9) || arr[i][0] > 'F') {
       return false;
     }
-    if ((arr[i][1] <= 0 && arr[i][1] >= 9) || arr[i][1] > 'F') {
+    if ((arr[i][1] < 0 && arr[i][1] > 9) || arr[i][1] > 'F') {
       return false;
     }
   }
