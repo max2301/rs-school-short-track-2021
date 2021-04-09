@@ -15,7 +15,8 @@ function findIndex(array, value) {
   let index = 0;
   let L = 0;
   let R = array.length;
-  while (true) {
+  const flag = true;
+  while (flag) {
     index = Math.floor((L + R) / 2);
     if (value < array[index]) {
       R = index - 1;
@@ -23,6 +24,7 @@ function findIndex(array, value) {
       L = index + 1;
     } else return index;
   }
+  return index;
 }
 
 module.exports = findIndex;
